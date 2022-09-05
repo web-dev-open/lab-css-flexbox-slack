@@ -1,1 +1,75 @@
 My notes to initiate PR
+
+Iteration 1 | Extra Small Screen (width < 768px)
+
+1. header section=> slack-logo, hambuger (Sticky)
+2. section-hero-1 => h2, article, div(email, button-(get started) - Already using? sign-in(underlined-txt))
+3. section-hero-2 => div-img(#project-mobile), h2, para, div-button-Discover Way, div-list-of-Company-Icons(1-by-1), div-(Try-it for-free,  Already using? sign-in(underlined-txt), email-address-box, button-get-started).
+4. section-hero-3: Slack-ICON at the top
+   Lists:
+   h3-Company-list(below-list-items), h3-Products-list(below-list-items),
+   h3-Resources-list(below-list-items), h3-Extras-list(below-list-items),
+5. Footer:
+    h4 => ul-lis: status, privacy & Terms, Contact US
+        ul-lis: US-flag, English(US), Down-Arrow-ICON
+        ul-lis: twitter-icon, fb-icon, yt-icon
+
+
+
+
+
+Iteration 2 | Small Screen (961px > width > 767px):
+
+1. header section=> slack-logo, hambuger (Sticky)
+2. section-hero-1 =>
+  h2,
+  article,
+  div(email, button-(get started)
+  - Already using? sign-in(underlined-txt))
+3. section-hero-2 => div-img(#project-mobile),
+4. h2(you're in) ,
+   para(millions),
+   div-button-Discover Why,
+   div-list-of-Company-Icons(1-by-1)-IMP-ONLY 2 ICONS***
+5. div-(Try-it for-free,  Already using? sign-in(underlined-txt), email-address-box, button-get-started).
+6. section-hero-3:
+   Slack-ICON at the top-left, Lists: h3-Company-list(below-list-items), h3-Products-list(below-list-items), h3-Resources-list(below-list-items), h3-Extras-(below-list-items),
+5. Footer:
+    h4 => div-(ul-lis: status, privacy & Terms, Contact US),  div(ul-lis: US-flag, English(US), Down-Arrow-ICON), div(ul-lis: twitter-icon, fb-icon, yt-icon)
+
+
+Iteration 3 | Medium Screen (1024px > width > 960px)
+
+4. h2(you're in) ,
+   para(millions),
+   div-button-Discover Why,
+   div-list-of-Company-Icons(1-by-1)-IMP-ONLY 3 ICONS***
+5. div-(Try-it for-free,                   Div(email-address-box, div(button-get-started))
+  Already using? sign-in(underlined-txt))
+
+
+Iteration 4 | Large Screen (width > 1200px)
+
+1. header section=> slack-logo -left, IMP***=> Hamburger-Now is UL-list(Why Slack? Pricing, About US, button(Your Workspaces))
+2. section-hero-1 =>
+  => ON LEFT-side:-----> div-img(#project-mobile).
+  => ON RIGHT-Side:
+  h1, BOLD Heading
+  article,
+  div(button-(get started)
+  - Already using? sign-in(underlined-txt))
+
+4. h2(you're in) ,
+   para(millions),
+   div-button-Discover Why,
+   div-list-of-Company-Icons(1-by-1)-IMP-ONLY 3 ICONS***
+5. div-(Try-it for-free,                   large space(WIDTH)  div(button-get-started)
+  Already using? sign-in(underlined-txt))
+6. section-hero-3:
+   Slack-ICON at the top-left, large space(WIDTH)  Lists: h3-Company-list(below-list-items), h3-Products-list(below-list-items), h3-Resources-list(below-list-items), h3-Extras-(below-list-items),
+5. Footer:
+    h4 => div-(ul-lis: status, privacy & Terms, Contact US), large space(WIDTH) div(ul-lis: US-flag, English(US), Down-Arrow-ICON), div(ul-lis: twitter-icon, fb-icon, yt-icon)
+
+
+
+
