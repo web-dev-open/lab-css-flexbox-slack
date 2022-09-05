@@ -15,7 +15,7 @@ You should be reaaaaally familiar with [Slack](https://www.slack.com/) , but jus
 
   
 
-We use the app almost every day to keep our communications with our classmates and the **Ironhack** team, so we know perfectly the chat interface but today we are going to clone their landing page. [Here](https://www.slack.com/) you can visit the website and check what are we going to do. :stuck_out_tongue_winking_eye:
+We use the app almost every day to keep our communications with our classmates so we know perfectly the chat interface but today we are going to clone their landing page. [Here](https://www.slack.com/) you can visit the website and check what are we going to do. :stuck_out_tongue_winking_eye:
 
   
 
