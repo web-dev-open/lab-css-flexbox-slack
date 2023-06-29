@@ -1,7 +1,5 @@
-![Root Logo](https://imgur.com/np0rofN.png)
-
+<img src="https://imgur.com/XOS1Vdh.png"  width="150px" height="150px">
   
-
 
 # CSS | Slack clone with Flexbox
 
