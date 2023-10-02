@@ -1,7 +1,302 @@
-/*
-background-grey: #F4F3F4;
-button-purple: #192592
-main-titles dark-grey: #2C303F;
-paragraph grey: #5b5e6d;
-nav grey: #5b5e6d;
-*/
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
+    padding: 0;
+
+}
+
+:root {
+    --background-grey: #F4F3F4;
+    --button-purple: #192592 --main-titles: #2C303F;
+    --paragraph-grey: #5b5e6d;
+    --nav-grey: #5b5e6d;
+    --btn-main: #2f3f9e;
+}
+
+/*reset*/
+
+body,
+p,
+a,
+ul,
+li {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+.navigation,
+.allLis,
+.pBlack,
+.clients,
+.info,
+.subFooter {
+    display: flex;
+    justify-content: center;
+}
+
+header,
+main,
+footer {
+    padding: 40px 30px;
+}
+
+h1,
+h2,
+.clients {
+    font-weight: 700;
+    margin: 40px 0;
+}
+
+p {
+    font-size: 18px;
+    padding: 10px 0;
+}
+
+.navigation {
+    margin: 0 40px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.allLis {
+    flex-direction: row;
+    align-items: center;
+    color: var(--paragraph-grey);
+    text-align: center;
+}
+
+.logo {
+    width: 120px;
+}
+
+.talkingPng {
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.btn1,
+.btn2 {
+    border-radius: 5px;
+    text-transform: uppercase;
+    padding: 15px 25px;
+    background: var(--btn-main);
+    color: #fff;
+    border: none;
+    display: inline-block;
+    margin: 30px 0;
+}
+
+.btn2 {
+    background: #fff;
+    border: 1px solid var(--btn-main);
+    color: var(--btn-main);
+}
+
+.footerInfo {
+    width: 50%;
+}
+
+.greyStyle {
+    color: var(--paragraph-grey);
+    margin: 20px 0;
+}
+
+.pBlack {
+    color: #000;
+    justify-content: center;
+}
+
+.liBold {
+    font-weight: 700;
+}
+
+.greyBg {
+    background: var(--background-grey)
+}
+
+.clients {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.clientsItem {
+    width: 30%;
+    padding: 25px 0;
+}
+
+.info {
+    flex-direction: column;
+}
+
+.menuHidden {
+    display: none;
+}
+
+.minilogo {
+    width: 170px;
+}
+
+.footerwrap {
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: column;
+}
+
+.footerCol {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin-bottom: 30px 0;
+}
+
+.footer {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.footer>ul {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.subFooter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0;
+}
+
+
+@media screen and (min-width: 767px) and (max-width:960px) {
+    h1 {
+        font-size: 44px;
+    }
+
+    .btn1,
+    .btn2 {
+        margin: 30px auto;
+    }
+
+
+    .clients {
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+
+    .clientsItem {
+        margin: 0 70px;
+        width: 25%;
+    }
+
+    .footer {
+        flex-wrap: nowrap;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .footer>ul {
+        width: 40%;
+    }
+
+    footer {
+        background: #fff;
+    }
+
+    .subFooter {
+        flex-direction: row;
+    }
+
+    .subFooter>img {
+        width: 10%;
+    }
+
+    .footerwrap {
+        flex-direction: column;
+    }
+
+    .footerCol {
+        flex-direction: row;
+    }
+
+    .dtsize {
+        margin: 0 20px;
+    }
+}
+
+
+@media screen and (min-width:961px) {
+    h1 {
+        font-size: 50px;
+    }
+
+    .burger {
+        display: none;
+    }
+
+    .btn1,
+    .btn2 {
+        margin: 30px auto;
+    }
+
+    .menuHidden {
+        display: flex;
+        justify-content: space-evenly;
+        width: 50%;
+    }
+
+    .clients {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+
+    .clientsItem {
+        margin: 0 70px;
+        width: 15%;
+    }
+
+    .footerwrap {
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    .footer {
+        flex-wrap: nowrap;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .footerCol {
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+
+    .footer>ul {
+        width: 40%;
+    }
+
+    .subFooter {
+        flex-direction: row;
+    }
+
+    .minilogo {
+        width: 120px;
+        height: 120px;
+    }
+
+    .subFooter>img {
+        width: 10%;
+    }
+}
