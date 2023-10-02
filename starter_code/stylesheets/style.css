@@ -1,3 +1,9 @@
+.entire {
+    display: flex;
+    flex-direction: column;
+    
+}
+
 /*
 background-grey: #F4F3F4;
 button-purple: #192592
@@ -5,3 +11,203 @@ main-titles dark-grey: #2C303F;
 paragraph grey: #5b5e6d;
 nav grey: #5b5e6d;
 */
+
+
+
+.navbar {
+    overflow: hidden;
+    font-family: Arial;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 4px solid lightgray;
+  }
+  
+ 
+  .navbar a {
+    float: left;
+    font-size: 40px;
+    color: white;
+    text-align: center;
+    
+    text-decoration: none;
+  }
+  
+ 
+  .dropdown {
+    float: right;
+    overflow: hidden;
+  }
+  
+  
+  .dropdown .dropbtn {
+    font-size: 40px;
+    border: none;
+    outline: none;
+    color: black;
+    padding: 30px 16px;
+    background-color: inherit;
+    font-family: inherit; /* Important for vertical align on mobile phones */
+    margin: 0; /* Important for vertical align on mobile phones */
+  }
+  
+
+  .navbar a:hover, .dropdown:hover .dropbtn {
+    background-color: red;
+  }
+  
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  
+  .dropdown-content a {
+    float: none;
+    color: black;
+    padding: 35px 25px 0 0; 
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  
+ 
+  .dropdown-content a:hover {
+    background-color: #ddd;
+  }
+  
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  .slack {
+    height: 100px;
+  }
+
+  .space {
+    padding: 15px 200px;
+  }
+
+  .dropbtn {
+    padding: 20px;
+  }
+  
+  h1 { 
+    font-size: 70px;
+  }
+
+  p {
+    font-size: 20px;
+  }
+
+  .entire-rest {
+    margin: 10px 40px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .logo-contain {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+  }
+
+  .size {
+    height: 100px;
+    width: auto;
+
+  }
+
+  .pbutton {
+    text-align: center;
+  }
+
+  .center-pic {
+    align-items: center;
+    width: 900px;
+    margin-top: 30px;
+  }
+
+  h2 {
+    font-size: 60px;
+  }
+
+  .started {
+    height: 100px;
+    width: 700px;
+    background-color: #4048aa;
+    color: white;
+    font-size: 30px;
+    border-radius: 10px;
+  }
+
+
+  .split {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .discover {
+    height: 100px;
+    width: 700px;
+    
+    color: #4048aa;;
+    font-size: 30px;
+    border-radius: 10px;
+  }
+
+  .gray {
+    background-color: gray;
+    display: flex;
+    
+    
+
+  }
+
+  .bottom {
+    display: flex;
+    flex-direction: column;
+  }
+
+  li {
+    margin: 20px;
+  }
+
+  .status {
+    display: flex;
+    justify-content: center;
+  }
+
+  .statusone > li {
+    display: inline-block;
+    justify-content: center;
+  }
+
+ 
+  
+  
+
+  .firstBottom > ul > li {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100px;
+  }
+
+
+  .imgdiv {
+    display: flex;
+
+  }
+
+  .flag {
+    margin: auto;
+  }
