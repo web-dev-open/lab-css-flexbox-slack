@@ -17,49 +17,138 @@
   </head>
 
   <body>
-    <nav>
-      <img src="./images/slack-logo.png" alt="slack_logo" />
-      <ul>
-        <li>Why Slack?</li>
-        <li>Pricing</li>
-        <li>About Us</li>
-        <li>Your Workspaces</li>
-      </ul>
+    <nav class="top-header">
+      <div class="slack-header-logo">
+        <img
+          src="./images/slack-logo.png"
+          alt="slack_logo"
+          class="header-slack-logo"
+        />
+      </div>
+      <div class="nav-items-desktop">
+        <ul>
+          <li>Why Slack?</li>
+          <li>Pricing</li>
+          <li>About Us</li>
+          <button class="your-workspace-button">Your Workspaces</button>
+        </ul>
+      </div>
+      <div class="hamburger-icon">
+        <img
+          src="./images/ci_hamburger.svg"
+          alt=""
+          srcset=""
+          class="hamburg-icon"
+        />
+      </div>
     </nav>
-    <header>
-      <img src="./images/home_talking.png" alt="home_work_happening" />
-      <h1>Where Work Happens</h1>
-      <p>
-        When your team needs to kick off a project, hire a new employee, deploy
-        some code, review a sales contract, finalize next year's budget, measure
-        an A/B test, plan your next office opening, and more, Slack has you
-        covered.
-      </p>
-      <button type="button" name="button">GET STARTED</button>
+    <header class="hero-1">
+      <div class="hero-img-projectMobile">
+        <img
+          src="./images/home_talking.png"
+          alt="home_work_happening"
+          class="project-mobile-img"
+        />
+      </div>
+      <div class="heading-whereWork">
+        <h1 class="whereWork-heading">Where Work Happens</h1>
+      </div>
+      <article class="hero-1-para">
+        <p class="hero-1-article-para">
+          When your team needs to kick off a project, hire a new employee,
+          deploy some code, review a sales contract, finalize next year's
+          budget, measure an A/B test, plan your next office opening, and more,
+          Slack has you covered.
+        </p>
+      </article>
+      <div class="email-form">
+        <form action="" class="email-form">
+          <input
+            type="email"
+            name=""
+            id=""
+            class="default-email-txt"
+            placeholder="Email address"
+          />
+        </form>
+      </div>
+      <div class="hero-1-button">
+        <button type="button" name="button" class="hero-1-button-get-started">
+          GET STARTED
+        </button>
+      </div>
       <p>Already using Slack? <a href="#">Sign in</a></p>
     </header>
-    <main>
-      <div>
-        <h2>You're in good company</h2>
-        <p>
-          Millions of people around the world have already made Slack the place
-          where their work happens.
-        </p>
-        <button>DISCOVER WHY</button>
-        <img src="./images/airbnb-logo.png" alt="" />
-        <img src="./images/capital-one-logo.png" alt="" />
-        <img src="./images/harvard-logo.png" alt="" />
-        <img src="./images/los-angeles-times-logo.png" alt="" />
-        <img src="./images/oracle-logo.png" alt="" />
-        <img src="./images/ticketmaster-logo.png" alt="" />
+    <main class="hero-2">
+      <div class="section-hero-2">
+        <div class="hero-2-heading">
+          <h2 class="heading-hero-2">You're in good company</h2>
+        </div>
+        <div class="hero-2-para">
+          <p class="para-hero-2">
+            Millions of people around the world have already made Slack the
+            place where their work happens.
+          </p>
+        </div>
+        <div class="hero-2-button">
+          <button class="button-hero-2">DISCOVER WHY</button>
+        </div>
+        <div class="hero-2-company-logos">
+          <div class="hero-2-logo-airbnb">
+            <img src="./images/airbnb-logo.png" alt="" class="logo-airbnb" />
+          </div>
+          <div class="hero-2-logo-capital-one">
+            <img
+              src="./images/capital-one-logo.png"
+              alt=""
+              class="logo-capital-one"
+            />
+          </div>
+          <div class="hero-2-logo-harvard">
+            <img src="./images/harvard-logo.png alt=" class="logo-harvard" />
+          </div>
+          <div class="hero-2-logo-la-times">
+            <img
+              src="./images/los-angeles-times-logo.png"
+              alt=""
+              class="logo-la-times"
+            />
+          </div>
+          <div class="hero-2-logo-oracle">
+            <img src="./images/oracle-logo.png" alt="" class="logo-oracle" />
+          </div>
+          <div class="hero-2-logo-ticketmaster">
+            <img
+              src="./images/ticketmaster-logo.png"
+              alt=""
+              class="logo-ticketmaster"
+            />
+          </div>
+        </div>
       </div>
-      <div>
-        <p>Try it for free</p>
+
+      <div class="hero-2-try-free">
+        <p class="try-for-free">Try it for free</p>
         <p>Already using Slack? <a href="">Sign in</a></p>
-        <button type="button" name="button">GET STARTED</button>
+        <div class="email-form">
+          <form action="" class="email-form">
+            <input
+              type="email"
+              name=""
+              id=""
+              class="default-email-txt"
+              placeholder="Email address"
+            />
+          </form>
+        </div>
+        <div class="hero-2-get-button">
+          <button type="button" name="button" class="get-started-button">
+            GET STARTED
+          </button>
+        </div>
       </div>
     </main>
-    <footer>
+    <footer class="final-footer">
       <div>
         <img src="./images/iso-slack.png" alt="" />
         <ul>
@@ -95,19 +184,23 @@
           <li>Slack Fund</li>
         </ul>
       </div>
-      <div>
-        <ul>
+      <div class="footer-bottom">
+        <ul class="footer-left-ul">
           <li>Status</li>
           <li>Privacy & Terms</li>
           <li>Contact Us</li>
         </ul>
-        <div>
-          <img src="./images/us-flag.png" alt="" />
-          <span>English (US)</span>
-          <i class="fas fa-chevron-down"></i>
-          <i class="fab fa-twitter"></i>
-          <i class="fab fa-facebook-f"></i>
-          <i class="fab fa-youtube"></i>
+        <div class="footer-right-ul">
+          <div class="footer-right-ul-usflag">
+            <img src="./images/us-flag.png" alt="" />
+            <span>English (US)</span>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="footer-right-ul-social-icons">
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-facebook-f"></i>
+            <i class="fab fa-youtube"></i>
+          </div>
         </div>
       </div>
     </footer>

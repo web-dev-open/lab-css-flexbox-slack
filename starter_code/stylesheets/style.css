@@ -5,3 +5,53 @@ main-titles dark-grey: #2C303F;
 paragraph grey: #5b5e6d;
 nav grey: #5b5e6d;
 */
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.top-header{
+  display: grid;
+}
+
+.slack-header-logo{
+  grid-area: slack-header-logo;
+}
+.header-slack-logo{
+  width: 8rem;
+}
+
+.nav-items-desktop {
+  grid-area: nav-items-desktop;
+}
+
+.hamburger-icon{
+  grid-area: hamburger-icon;
+
+}
+
+.hamburg-icon{
+  width: 2rem;
+  color: lightgrey;
+}
+
+/*Break points:*/
+@media (max-width:768px)  {
+.top-header {
+    grid-template-columns: auto 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "slack-header-logo hamburger-icon";
+    column-gap: 40%;
+    justify-items: center;
+    align-items: center;
+    padding: 1rem 1rem;
+    margin: 1rem 1rem;
+  }
+ }
+@media (min-width:767px) { /* big landscape tablets, laptops, and desktops */ }
+@media (min-width:961px) {
+  /* tablet, landscape iPad, lo-res laptops ands desktops */
+}
+@media (min-width:1200px) { /* hi-res laptops and desktops */ }
