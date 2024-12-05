@@ -1,0 +1,1816 @@
+/* CSS Clockwork by Nathan Chan for Slack Clone */ 
+
+/* Global CSS Scopes */
+
+.footer {
+  padding: 2rem 1rem;
+}
+
+.footer-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.footer-column {
+  width: 45%; /* Adjust as needed, leaving some space between columns */
+  margin-bottom: 1rem;
+}
+
+.footer ul {
+  list-style-type: none;
+  padding: 5px 20px;
+  line-height: 40px;
+  margin: 0;
+}
+
+.footer-heading {
+  font-weight: bold;
+  font-size: x-large;
+  margin-bottom: -1rem;  
+  font-family: 'Calibri', Arial;
+}
+
+.iso-slack {
+  max-width: 100px;
+  margin-top: 2rem;
+}
+
+@media screen and (max-width: 768px) { /* For Android and iPhones -- Extra Small Screen */
+
+/* General styles */
+  body {
+    padding-top: 60px; /* Adjust this value based on your navbar height */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body.menu-open {
+    overflow: hidden;
+  }
+
+  /* Navbar styles */
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background-color: #fff;
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .slack-logo {
+    margin-left: 35px;
+    height: 60px;
+  }
+  
+  .nav-items {
+    position: fixed;
+    top: 90px;
+    right:  -10%; /* Start off-screen to the right */
+    bottom: 0;
+    width: 100%;
+    height: calc(100% - 90px);
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding-top: 50px;
+    padding-left: 300px;
+    list-style-type: none;
+    margin: 0;
+    overflow-y: hidden;
+    transition: transform 0.3s ease-in-out; /* Use transform for better performance */
+    transform: translateX(110%); /* Move it off-screen */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  
+  .nav-items.show {
+    transform: translateX(0); /* Bring it into view */
+  }
+ .nav-items li {
+      margin-bottom: 2vh; /* Use viewport height units for responsive spacing */
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 2vh; /* Adjust this value as needed */
+      line-height: 1.2; /* Adjust line height for better spacing */
+    }
+   
+  /* Hamburger icon */
+  .hamburger {
+    font-size: 2.5rem;
+    cursor: pointer;
+    padding: 5px;
+    color: #4a154b; /* Change the color to match your design */
+    background-color: transparent;
+    border: none;
+  }
+  
+  /* Header styles */
+  header {
+    display: flex;
+    flex-direction: column;
+    padding-top: 8rem;
+    padding-right: 50px;
+    padding-left: 50px;
+  }
+  
+  .home-talking {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+  }
+
+  .home-talking-full-width {
+    display: none;
+  }
+
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  h1.where-work-happens-text {
+    font-family: 'Times New Roman', Times, serif;
+    line-height: 1;
+    font-size: 45px;    
+  }
+  
+  p {
+    margin-bottom: 1rem;
+  }
+
+  p.slack-quote {
+    font-family: 'Calibri';
+    font-size: 22px;
+    padding-top: 5px;
+    padding-bottom: 35px;
+    color: #5f626f;
+  }
+  
+  /* Header Section */
+
+  .button-class {
+    background-color: #4049aa;
+    color: white;
+    border: none;
+    padding: 1.2rem 1.2rem;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-bottom: 0.25rem;
+    border-radius: 6px;
+    font-family: "Calibri";
+    font-weight: bold;
+    width: 104%;
+  }
+
+  .email-input {
+    width: 92.5%;
+    max-width: 100%;
+    padding: 20px;
+    font-size: 16px;
+    color: #5f626f;
+    font-family: "Calibri";
+    font-size: 18px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 1.7rem;
+  }
+  
+  .email-input::placeholder {
+    color: #5f626f;
+    font-family: "Calibri";
+    font-size: 18px;
+  }
+
+  .sign-in {
+    color: #424aab;
+  }
+  
+  .already-using-slack {
+    font-family: "Calibri";
+    text-align: center;
+    font-size: large;
+    color: #5e616f;
+  }
+
+  .already-using-slack a {
+    color: #424bab;
+  }
+
+  /* Main content styles */
+  .grey-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding-top: 2rem;
+  padding-right: 1em;
+  background-color: #f4f4f4;
+  border-bottom: 0.5px solid lightgrey;
+  border-top: 0.5px solid lightgrey;
+  width: 100%;
+}
+  
+ .h2-quote {
+    font-size: 1.5rem;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  
+  .good-company-description {
+    font-family: "Calibri";
+    font-size: 20px;
+    margin-top: -1rem;
+    margin-bottom: 1rem;
+    color: #676a77;
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+
+  .grey-section button {
+    background-color: white;
+    color: #1e2f9a;
+    border: 1.5px solid #1e2f9a;
+    padding: 1rem 1rem;
+    margin-top: 2rem;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-bottom: 2rem;
+    font-weight: bolder;
+    max-width: 85%;
+    border-radius: 5px;
+  }
+  
+  .grey-section img {
+    width: 80%;
+  }
+
+  .good-company-quote,
+  .good-company-description,
+  .grey-section button {
+    width: 100%;
+  }
+
+  .logo-section {
+    margin-top: -1rem;
+  }
+
+  .logo-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px;
+    margin-bottom: -30px;
+  }
+
+  .logo-section-container {
+    width: 90%;
+    border-bottom: 1px solid lightgrey;
+  }
+
+  .logo-section-container:last-child {
+    border-bottom: none;
+    padding-bottom: 100px;
+    margin-bottom: 0;
+  }
+
+  img.logo {
+    width: 50%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+  
+  .try-it-for-free-section {
+    padding: 2rem 1rem;
+    text-align: center;
+  }
+  
+  /* Bottom Section */ 
+
+ .bottom-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-top: 3rem;
+    padding-right: 50px;
+    padding-left: 50px;
+    padding-bottom: 80px;
+    border-bottom: 1px solid lightgrey;
+  }
+
+  .already-using-slack-2 {
+    margin-top: -15px;
+    color: black;
+    font-family: "Calibri";
+    font-size: large;
+  }
+
+  .try-it-for-free-section-2 {
+    text-align: center;
+  }
+
+  /* Footer styles */
+  .footer {
+    padding: 2rem 1rem;
+  }
+
+  .footer-column {
+    width: 50%; /* Adjust for 4 columns on larger screens */
+  }
+
+  li.footer-heading {
+    font-weight: bold;
+    padding-bottom: 1rem;  
+  }
+
+  footer ul {
+    font-family: 'Calibri';
+    font-size: 20px;
+    color: #6d6f7a;
+  }
+
+  .iso-slack {
+    max-width: 130px;
+    margin-bottom: 1rem;
+  }
+  
+  .company-links,
+  .product-links,
+  .resources-links,
+  .extras-links {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 1rem;
+  }
+  
+  .company-links li:first-child,
+  .product-links li:first-child,
+  .resources-links li:first-child,
+  .extras-links li:first-child {
+    font-weight: bold;
+    margin-bottom: -1.5rem;
+  }
+
+  .subfooter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.5rem 0;
+    background-color: #f5f5f5;
+    padding-top: 5px;
+    line-height: 40px;
+  }
+  
+  .subfooter-left ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .subfooter-left ul li {
+    margin: 0 0.5rem;
+    color: #6d6f7a;
+    font-size: large;
+    font-weight: bold;
+  }
+  
+  .subfooter-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 60px;
+  }
+  
+  .language-selector {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    margin-top: -1rem;
+    font-size: large;
+    color: #6d6f7a;
+    font-weight: bolder;
+  }
+  
+  .language-selector img {
+    height: 20px;
+    margin-right: 0.5rem;
+  }
+  
+  .language-selector span {
+    margin-right: 0.5rem;
+  }
+  
+  .social-icons {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .social-icons i {
+    font-size: 20px;
+    margin: 0 10px;
+    color: #6d6f7a;
+    transition: color 0.3s ease;
+    margin-bottom: 5px;
+  }
+  
+  .social-icons i:hover {
+    color: #1264a3;
+  }
+  
+  /* Individual colors for each icon */
+  .social-icons .fa-twitter:hover {
+    color: #1da1f2;
+  }
+  
+  .social-icons .fa-facebook-f:hover {
+    color: #4267B2;
+  }
+  
+  .social-icons .fa-youtube:hover {
+    color: #FF0000;
+  }
+  
+}
+
+@media screen and (min-width: 768px) and (max-width: 960px) {   /* Small Screen */
+  
+/* General styles */
+  body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+  .slack-logo {
+    margin-top: 20px;
+    margin-left: 45px;
+    height: 80px;
+  }
+ 
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background-color: #fff;
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .slack-logo {
+    margin-left: 35px;
+    height: 60px;
+  }
+  
+  .nav-items {
+    position: fixed;
+    top: 90px;
+    right:  -10%; /* Start off-screen to the right */
+    bottom: 0;
+    width: 100%;
+    height: calc(100% - 90px);
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding-top: 50px;
+    padding-left: 300px;
+    list-style-type: none;
+    margin: 0;
+    overflow-y: hidden;
+    transition: transform 0.3s ease-in-out; /* Use transform for better performance */
+    transform: translateX(110%); /* Move it off-screen */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  
+  .nav-items.show {
+    transform: translateX(0); /* Bring it into view */
+  }
+ .nav-items li {
+      margin-bottom: 2vh; /* Use viewport height units for responsive spacing */
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 2vh; /* Adjust this value as needed */
+      line-height: 1.2; /* Adjust line height for better spacing */
+    }
+   
+  /* Hamburger icon */
+  .hamburger {
+    font-size: 2.5rem;
+    cursor: pointer;
+    padding: 5px;
+    color: #4a154b; /* Change the color to match your design */
+    background-color: transparent;
+    border: none;
+  }
+  
+  /* Header styles */
+  header {
+    display: flex;
+    flex-direction: column;
+    padding-top: 8rem;
+    padding-right: 50px;
+    padding-left: 50px;
+  }
+  
+  .home-talking {
+    max-width: 100%;
+    width: 70%;
+    text-align: center;
+    margin-bottom: 1rem;
+    align-self: center; /* Aligns the element to the right */
+  }
+
+  .home-talking-full-width {
+    display: none;
+  }
+
+  
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  h1.where-work-happens-text {
+    font-family: 'Times New Roman', Times, serif;
+    line-height: 1.5;
+    font-size: 73px;    
+    letter-spacing: -0.2rem;
+  }
+  
+  p {
+    margin-bottom: 1rem;
+  }
+
+  p.slack-quote {
+    font-family: 'Calibri';
+    font-size: 20px;
+    padding-top: 5px;
+    padding-bottom: 35px;
+    color: #5f626f;
+  }
+
+  .sign-in {
+    color: #424aab;
+  }
+  
+  /* Header Section */
+
+  .input-button-container {
+    display: flex;
+    width: 100%;
+    height: 15px;
+    margin-bottom: 1.7rem;
+    }
+
+  .right-column .button-class {
+    background-color: #4049aa;
+    color: white;
+    border: none;
+    padding: 14px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-bottom: 0.25rem;
+    margin-left: 10px;
+    border-radius: 6px;
+    font-family: "Calibri";
+    font-weight: bold;
+    /* Add these properties to center the text */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 40%;
+   }
+
+  .email-input {
+    width: 40%;
+    max-width: 40%;
+    padding-top: 1.8rem;
+    padding-bottom: 1.8rem;
+    padding-left: 20px;
+    font-size: 20px;
+    color: #5f626f;
+    font-family: "Calibri";
+    border: 1px solid #ccc;
+    border-radius:6px;
+   }
+  
+  .email-input::placeholder {
+    color: #5f626f;
+    font-family: "Calibri";
+    font-size: 20px;    
+  }
+
+  .already-using-slack {
+    font-family: "Calibri";
+    text-align: left;
+    font-size: large;
+    color: #5e616f;
+    margin-top: 60px;
+  }
+
+  .already-using-slack a {
+    color: #424bab;
+  }
+
+  /* Main content styles */
+  .grey-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding-right: 1rem;
+  padding-top: 2rem;
+  background-color: #f4f4f4;
+  border-bottom: 0.5px solid lightgrey;
+  border-top: 0.5px solid lightgrey;
+  width: 100%;
+}
+  
+  .h2-quote {
+    font-size: 32px;
+    font-family: 'Times New Roman', Times, serif;
+    margin-top: 40px;
+    margin-left: 40px;
+    margin-bottom: 7px;
+    letter-spacing: -2px;
+  }
+  
+  .good-company-description {
+    font-family: "Calibri";
+    font-size: 18px;
+    margin-bottom: 1rem;
+    color: #676a77;
+  }
+
+  .grey-section button {
+    background-color: white;
+    color: #1e2f9a;
+    border: 1.5px solid #1e2f9a;
+    padding: 2rem 1.5rem;
+    margin-top: 2rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin-bottom: 2rem;
+    font-weight: bolder;
+    width: 35%;
+    max-width:35%;
+    border-radius: 8px;
+  }
+  
+  .grey-section img {
+    margin: 1rem 0;
+  }
+
+  .good-company-quote,
+  .good-company-description,
+  .grey-section button {
+    width: 100%;
+  }
+
+  .logo-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Creates two equal-width columns */
+    gap: 0px; /* Adds space between grid items */
+    padding: 50px 0;
+    }
+  
+  .logo-section-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid  #ebebeb;
+    padding-bottom: 20px;
+  }
+  
+  /* Add right border only to odd-numbered (left column) items */
+  .logo-section-container:nth-child(odd) {
+    border-right: 1px solid #ebebeb;
+  }
+  
+  /* Remove bottom border from last two items */
+  .logo-section-container:nth-last-child(-n+2) {
+    border-bottom: none;
+  }
+  
+  .logo {
+    max-width: 70%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  .already-using-slack-2 {
+    margin-top: -30px;
+    margin-left: 40px;
+    color: black;
+    font-family: "Calibri";
+    font-size: medium;
+    margin-top: 0;
+    }
+
+  .bottom-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0px;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    padding-bottom: 3rem;
+    align-items: center;
+    border-bottom: 0.5px solid lightgrey;    
+  }
+  
+  .left-column {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .right-column {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 30px;
+   }
+  
+  .h2-quote {
+    margin-bottom: 10px;
+  }
+   
+  .right-column .email-input {
+    flex: 1;
+    min-width: 80px; /* Adjust this value as needed */
+    padding: 12px;
+  }
+
+  /* Footer */
+  
+  .footer {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 40px 20px;
+  }
+  
+  .footer-content {
+    display: flex;
+    align-items: flex-start;   
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .logo-column {
+    flex: 0 0 auto; /* Allow logo to take its natural width */
+    margin-right: 40px; /* Space between logo and first column */
+  }
+  
+  .footer-column {
+    flex: 1; /* Each column takes equal width of remaining space */
+    padding: 0 10px; /* Horizontal padding between columns */
+  }
+  
+  .iso-slack {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain; /* This ensures the image keeps its aspect ratio */
+    object-position: left top; /* This aligns the image to the top-left of its container */
+    margin-top: -35px;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    font-size: medium;
+    color: black;
+  }
+
+  .footer ul {
+    color: #6d6f7a;
+  }
+  
+  .footer-heading {
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-family: 'Calibri';
+  }
+
+  .subfooter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #f5f5f5;
+    padding-left: 55px;
+    padding-right: 55px;
+    padding-top: 40px;
+    padding-bottom: 55px;
+    font-family: 'Calibri';
+    font-weight: bolder;
+    font-size: x-large;
+    color: #6d6f7a;
+  }
+
+  .subfooter li {
+    color: #6d6f7a;
+    font-size: x-large;
+  }
+  
+  .subfooter-left ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .subfooter-left li {
+    margin-right: 20px; /* Space between list items */
+  }
+  
+  .subfooter-right {
+    display: flex;
+    align-items: center;
+  }
+  
+  .language-selector {
+    display: flex;
+    align-items: center;
+    margin-right: 20px; /* Space between language selector and social icons */
+  }
+  
+  .language-selector img {
+    width: 20px; /* Adjust as needed */
+    margin-right: 5px;
+  }
+  
+  .language-selector i {
+    margin-left: 5px;
+  }
+  
+  .social-icons i {
+    margin-left: 15px; /* Space between social icons */
+  }
+
+  .subfooter i:hover {
+    color: #1264a3; /* Color when hovered */
+  }
+  
+  /* Individual colors for each icon, if desired */
+  .subfooter .fa-twitter:hover {
+    color: #1da1f2; /* Twitter blue */
+  }
+  
+  .subfooter .fa-facebook-f:hover {
+    color: #4267B2; /* Facebook blue */
+  }
+  
+  .subfooter .fa-youtube:hover {
+    color: #FF0000; /* YouTube red */
+  }  
+}
+
+@media screen and (min-width: 960px) and (max-width: 1024px) {   /* Medium Screen */
+
+  /* General styles */
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+    .slack-logo {
+      margin-top: 20px;
+      margin-left: 45px;
+      height: 80px;
+    }
+   
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      background-color: #fff;
+      padding: 1rem;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .slack-logo {
+      margin-left: 35px;
+      height: 60px;
+    }
+    
+    .nav-items {
+      position: fixed;
+      top: 90px;
+      right:  -10%; /* Start off-screen to the right */
+      bottom: 0;
+      width: 100%;
+      height: calc(100% - 90px);
+      background-color: #fff;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      padding-top: 50px;
+      padding-left: 300px;
+      list-style-type: none;
+      margin: 0;
+      overflow-y: hidden;
+      transition: transform 0.3s ease-in-out; /* Use transform for better performance */
+      transform: translateX(110%); /* Move it off-screen */
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
+  
+    
+    .nav-items.show {
+      transform: translateX(0); /* Bring it into view */
+    }
+   .nav-items li {
+        margin-bottom: 2vh; /* Use viewport height units for responsive spacing */
+        cursor: pointer;
+        font-weight: bold;
+        font-size: 2vh; /* Adjust this value as needed */
+        line-height: 1.2; /* Adjust line height for better spacing */
+      }
+     
+    /* Hamburger icon */
+    .hamburger {
+      font-size: 2.5rem;
+      cursor: pointer;
+      padding: 5px;
+      color: #4a154b; /* Change the color to match your design */
+      background-color: transparent;
+      border: none;
+    }
+    
+    /* Header styles */
+    header {
+      display: flex;
+      flex-direction: column;
+      padding-top: 8rem;
+      padding-right: 50px;
+      padding-left: 50px;
+    }
+    
+    .home-talking {
+      max-width: 100%;
+      width: 70%;
+      text-align: center;
+      margin-bottom: 1rem;
+      align-self: center; /* Aligns the element to the right */
+    }
+
+    .home-talking-full-width {
+      display: none;
+    }  
+    
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+  
+    h1.where-work-happens-text {
+      font-family: 'Times New Roman', Times, serif;
+      line-height: 1.5;
+      font-size: 73px;    
+    }
+    
+    p {
+      margin-bottom: 1rem;
+    }
+  
+    p.slack-quote {
+      font-family: 'Calibri';
+      font-size: 30px;
+      padding-top: 5px;
+      padding-bottom: 35px;
+      color: #5f626f;
+    }
+  
+    .sign-in {
+      color: #424aab;
+    }
+    
+    /* Header Section */
+  
+    .input-button-container {
+      display: flex;
+      width: 100%;
+      margin-bottom: 1.7rem;
+      }
+  
+    .button-class {
+      background-color: #4049aa;
+      color: white;
+      border: none;
+      padding: 1.8rem 1.8rem;
+      font-size: 1.5rem;
+      cursor: pointer;
+      margin-bottom: 0.25rem;
+      margin-left: 20px;
+      border-radius: 6px;
+      font-family: "Calibri";
+      font-weight: bold;
+     }
+  
+    .email-input {
+      width: 47%;
+      max-width: 47%;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      padding-left: 20px;
+      font-size: 24px;
+      color: #5f626f;
+      font-family: "Calibri";
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    
+    .email-input::placeholder {
+      color: #5f626f;
+      font-family: "Calibri";
+      font-size: 24px;
+    }
+  
+    .already-using-slack {
+      font-family: "Calibri";
+      text-align: left;
+      font-size: x-large;
+      color: #5e616f;
+      margin-top: -5px;
+    }
+  
+    .already-using-slack a {
+      color: #424bab;
+    }
+  
+    /* Main content styles */
+    .grey-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-right: 1rem;
+    padding-top: 2rem;
+    background-color: #f4f4f4;
+    border-bottom: 0.5px solid lightgrey;
+    border-top: 0.5px solid lightgrey;
+    width: 100%;
+  }
+    
+    .h2-quote {
+      font-size: 42px;
+      font-family: 'Times New Roman', Times, serif;
+      margin-top: 40px;
+      margin-left: 40px;
+      margin-bottom: 7px;
+    }
+    
+    .good-company-description {
+      font-family: "Calibri";
+      font-size: 26px;
+      margin-bottom: 1rem;
+      color: #676a77;
+    }
+  
+    .grey-section button {
+      background-color: white;
+      color: #1e2f9a;
+      border: 1.5px solid #1e2f9a;
+      padding: 2rem 1.5rem;
+      margin-top: 2rem;
+      font-size: 1.5rem;
+      cursor: pointer;
+      margin-bottom: 2rem;
+      font-weight: bolder;
+      width: 35%;
+      max-width:35%;
+      border-radius: 8px;
+    }
+    
+    .grey-section img {
+      margin: 1rem 0;
+    }
+  
+    .good-company-quote,
+    .good-company-description,
+    .grey-section button {
+      width: 100%;
+    }
+  
+    .logo-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr); /* Creates three equal-width columns */
+      padding: 50px 30px;
+    }
+
+    /* Remove top border for the first row */
+   .logo-section-container:nth-child(-n+3) {
+      border-top: none;
+      border-right: none;
+      border-left: none;
+    }
+      
+    /* Add right border only to odd-numbered (left column) items */
+    .logo-section-container:nth-child(3n+1),
+    .logo-section-container:nth-child(3n+2) {
+      border-right: 1px solid #ebebeb;
+     }
+  
+    /* Remove bottom border from last two items */
+    .logo-section-container:nth-last-child(-n+3) {
+      border-bottom: none;      
+    }
+
+  /* Remove left border from the first item in the last row */
+    .logo-section-container:nth-last-child(3) {
+      border-left: none;
+   }
+
+/* Remove right border from the last item in the last row */
+   .logo-section-container:last-child {
+     border-right: none;
+   }
+      
+  .logo-section-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      border: 1px solid #ebebeb;
+    }   
+
+  .logo {
+      max-width: 70%;
+      height: auto;
+      object-fit: contain;
+    }
+
+    .already-using-slack-2 {
+      margin-top: -30px;
+      margin-left: 40px;
+      color: black;
+      font-family: "Calibri";
+      font-size: x-large;
+      margin-top: 0;
+      }
+  
+    .bottom-section {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0px;
+      padding-right: 2rem;
+      padding-left: 2rem;
+      padding-bottom: 3rem;
+      align-items: center;
+      border-bottom: 0.5px solid lightgrey;    
+    }
+    
+    .left-column {
+      display: flex;
+      flex-direction: column;
+    }
+  
+    .right-column {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: center;
+      margin-top: 30px;
+     }
+    
+    .h2-quote {
+      margin-bottom: 10px;
+    }
+     
+    .email-input {
+      flex: 1;
+      min-width: 80px; /* Adjust this value as needed */
+      padding: 30px;
+    }
+  
+    /* Footer */
+    
+    .footer {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 40px 20px;
+    }
+    
+    .footer-content {
+      display: flex;
+      align-items: flex-start;   
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    .logo-column {
+      flex: 0 0 auto; /* Allow logo to take its natural width */
+      margin-right: 40px; /* Space between logo and first column */
+    }
+    
+    .footer-column {
+      flex: 1; /* Each column takes equal width of remaining space */
+      padding: 0 10px; /* Horizontal padding between columns */
+    }
+    
+    .iso-slack {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      object-fit: contain; /* This ensures the image keeps its aspect ratio */
+      object-position: left top; /* This aligns the image to the top-left of its container */
+      margin-top: -35px;
+    }
+    
+    ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      font-size: medium;
+      color: black;
+    }
+  
+    .footer ul {
+      color: #6d6f7a;
+    }
+    
+    .footer-heading {
+      font-weight: bold;
+      margin-bottom: 10px;
+      font-family: 'Calibri';
+    }
+  
+    .subfooter {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      background-color: #f5f5f5;
+      padding-left: 55px;
+      padding-right: 55px;
+      padding-top: 40px;
+      padding-bottom: 55px;
+      font-family: 'Calibri';
+      font-weight: bolder;
+      font-size: x-large;
+      color: #6d6f7a;
+    }
+  
+    .subfooter li {
+      color: #6d6f7a;
+      font-size: x-large;
+    }
+    
+    .subfooter-left ul {
+      display: flex;
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+    
+    .subfooter-left li {
+      margin-right: 20px; /* Space between list items */
+    }
+    
+    .subfooter-right {
+      display: flex;
+      align-items: center;
+    }
+    
+    .language-selector {
+      display: flex;
+      align-items: center;
+      margin-right: 20px; /* Space between language selector and social icons */
+    }
+    
+    .language-selector img {
+      width: 20px; /* Adjust as needed */
+      margin-right: 5px;
+    }
+    
+    .language-selector i {
+      margin-left: 5px;
+    }
+    
+    .social-icons i {
+      margin-left: 15px; /* Space between social icons */
+    }
+  
+    .subfooter i:hover {
+      color: #1264a3; /* Color when hovered */
+    }
+    
+    /* Individual colors for each icon, if desired */
+    .subfooter .fa-twitter:hover {
+      color: #1da1f2; /* Twitter blue */
+    }
+    
+    .subfooter .fa-facebook-f:hover {
+      color: #4267B2; /* Facebook blue */
+    }
+    
+    .subfooter .fa-youtube:hover {
+      color: #FF0000; /* YouTube red */
+    }    
+}
+    
+@media screen and (min-width: 1200px)    /* Large Screen */
+
+  {
+    /* General styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+      .slack-logo {
+        margin-top: 20px;
+        margin-left: 45px;
+        height: 80px;
+      }
+     
+      .navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+        background-color: #fff;
+        padding: 1rem;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+     
+      }
+      
+    .slack-logo {
+        margin-left: 35px;
+        height: 60px;
+      }
+      
+    
+    .nav-items {
+       display: flex;
+       list-style-type: none;
+       margin: 0;
+       padding: 0;
+       margin-right: 35px; /* Adjust as needed */
+    }
+
+    .nav-items li {
+      margin-left: 3rem;
+      cursor: pointer;
+      font-weight: normal;
+      font-size: 1rem;
+      font-family: 'Calibri', Arial;
+      color: #6e707b;
+      font-size: x-large;
+    } 
+
+    .nav-items li a {
+      text-decoration: none;
+      color: #000;
+    }
+
+    .workspace-link {
+      border: 1px solid #000;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      display: flex;
+      align-items: center; /* Ensure vertical alignment with other items */
+      margin-top: -10px;
+  }
+       
+      /* Hamburger icon */
+      .hamburger {
+        display: none; /* Hide the hamburger icon */
+      }
+      
+      /* Header styles */
+      header {
+        display: flex;
+        flex-direction: column;
+        padding-top: 8rem;
+        padding-right: 50px;
+        padding-left: 50px;
+      }
+    
+    .header-section {
+      display: flex;
+      flex-direction: row;      
+    }
+
+    .header-content {
+        display: flex;
+        justify-content: space-between; /* Ensures image and text align side by side */
+        align-items: center;
+        width: 100%; /* Full width */
+        max-width: 1200px; /* Max width for the container */
+    }
+    
+    .home-talking-full-width {
+        max-width: 100%;
+        width: 80%; /* Adjust as needed */
+        margin-top: 100px;
+        height: auto;
+        margin-right: 2rem; /* Space between image and text */
+    }
+
+    .home-talking {
+     display: none;
+    }
+    
+    .text-content {
+        width: 50%; /* Adjust as needed */
+        text-align: left;
+    }
+    
+    h1.where-work-happens-text {
+        font-family: 'Times New Roman', Times, serif;
+        line-height: 1;
+        font-size: 6rem; /* Size for header */
+        letter-spacing: -0.5rem;
+    }
+    
+    p.slack-quote {
+        margin-bottom: 1rem;
+        font-family: 'Calibri';
+        font-size: 1.5rem;
+        margin-top: -25px;
+        color: #5f626f;
+    }
+    
+     .already-using-slack {
+        font-family: "Calibri";
+        font-size: 1.1rem;
+        color: #5e616f;
+     }
+    
+    .already-using-slack a {
+        color: #424bab;
+    }
+      
+      /* Header Section */
+    
+      .input-button-container {
+        display: flex;
+        width: 100%;
+        margin-bottom: 1.7rem;
+        }
+    
+      .button-class {
+        background-color: #4049aa;
+        color: white;
+        border: none;
+        padding: 1.5rem 3rem;
+        font-size: 1.5rem;
+        cursor: pointer;
+        margin-top: 1.5rem; 
+        margin-bottom: -25px;
+        margin-left: 0px;
+        border-radius: 6px;
+        font-family: "Calibri";
+        font-weight: bold ;
+        font-size: large;
+       }
+    
+      .email-input {
+        display: none;
+       }
+      
+      .email-input::placeholder {
+        display: none;
+      }
+
+      /* Flex containers */
+      .container-1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 2rem;     
+        flex: 1;   
+      }
+
+      .container-2 {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 2rem;        
+        flex: 1;
+      }   
+    
+      /* Main content styles */
+      .grey-section {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      padding-top: 1rem;
+      background-color: #f4f4f4;
+      border-bottom: 0.5px solid lightgrey;
+      border-top: 0.5px solid lightgrey;
+      width: 100%;
+    }
+      
+      .h2-quote {
+        font-size: 42px;
+        font-family: 'Times New Roman', Times, serif;
+        margin-top: 40px;
+        margin-left: 40px;
+        margin-bottom: 7px;
+        letter-spacing: -0.15rem;
+      }
+      
+      .good-company-description {
+        font-family: "Calibri";
+        font-size: 20px;
+        margin-bottom: 1rem;
+        color: #676a77;
+      }
+    
+      .grey-section button {
+        background-color: white;
+        color: #1e2f9a;
+        border: 1.5px solid #1e2f9a;
+        padding: 1.4rem 1.5rem;
+        margin-top: 2rem;
+        font-size: 1rem;
+        cursor: pointer;
+        margin-bottom: 2rem;
+        font-weight: bolder;
+        max-width:15%;
+        border-radius: 8px;
+        align-self: center; /* Center the button */
+      }
+      
+      .grey-section img {
+        margin: 1rem 0;
+      }
+    
+      .good-company-quote,
+      .good-company-description,
+      .grey-section button {
+        width: 100%;
+      }
+    
+      .logo-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* Creates three equal-width columns */
+        padding: 50px 30px;
+      }
+  
+      /* Remove top border for the first row */
+     .logo-section-container:nth-child(-n+3) {
+        border-top: none;
+        border-right: none;
+        border-left: none;
+      }
+        
+      /* Add right border only to odd-numbered (left column) items */
+      .logo-section-container:nth-child(3n+1),
+      .logo-section-container:nth-child(3n+2) {
+        border-right: 1px solid #ebebeb;
+       }
+    
+      /* Remove bottom border from last two items */
+      .logo-section-container:nth-last-child(-n+3) {
+        border-bottom: none;      
+      }
+  
+    /* Remove left border from the first item in the last row */
+      .logo-section-container:nth-last-child(3) {
+        border-left: none;
+     }
+  
+  /* Remove right border from the last item in the last row */
+     .logo-section-container:last-child {
+       border-right: none;
+     }
+        
+    .logo-section-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        border: 1px solid #ebebeb;
+      }   
+  
+    .logo {
+        max-width: 50%;
+        height: auto;
+        object-fit: contain;
+      }
+  
+      .right-column .button-class {
+        background-color: #4049aa;
+        color: white;
+        border: none;
+        padding: 1.5rem 3rem;
+        margin-top: -20px;
+        cursor: pointer;
+        border-radius: 6px;
+        font-family: "Calibri";
+        font-weight: bold;
+        font-size: large;
+       }
+
+      .already-using-slack-2 {
+        margin-top: -30px;
+        margin-left: 40px;
+        color: black;
+        font-family: "Calibri";
+        font-size: large;
+        margin-top: 0;
+        }
+    
+      .bottom-section {
+        display: flex;
+        justify-content: space-between;
+        padding-right: 2rem;
+        padding-left: 2rem;
+        padding-bottom: 3rem;
+        align-items: center;
+        border-bottom: 0.5px solid lightgrey;    
+      }
+      
+      .left-column {
+        display: flex;
+        flex-direction: column;
+      }
+    
+      .right-column {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        margin-top: 30px;
+       }
+      
+      .h2-quote {
+        margin-bottom: 10px;
+      }
+       
+      .email-input {
+        flex: 1;
+        min-width: 80px; /* Adjust this value as needed */
+        padding: 30px;
+      }
+    
+      /* Footer */
+      
+      .footer {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 60px;
+        padding-right: 100px;
+      }
+      
+      .footer-content {
+        display: flex;
+        align-items: flex-start;   
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+      
+      .logo-column {
+        flex: 0 0 auto; /* Allow logo to take its natural width */
+        margin-right: 40px; /* Space between logo and first column */
+      }
+      
+      .footer-column {
+        flex: 1; /* Each column takes equal width of remaining space */
+        padding: 0 30px; /* Horizontal padding between columns */
+      }
+      
+      .iso-slack {
+        width: 15%;
+        max-width: 15%;
+        height: auto;
+        display: block;
+        object-fit: contain; /* This ensures the image keeps its aspect ratio */
+        object-position: left top; /* This aligns the image to the top-left of its container */
+        margin-top: -35px;
+      }
+      
+      ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        font-size: medium;
+        font-weight: normal;
+        color: black;
+      }
+    
+      .footer ul {
+        color: #6d6f7a;
+      }
+      
+      .footer-heading {
+        font-weight: 800;
+        margin-bottom: 10px;
+        font-family: 'Calibri';
+        font-size: larger;
+      }
+    
+      .subfooter {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+        background-color: #f5f5f5;
+        padding-left: 55px;
+        padding-right: 55px;
+        padding-top: 40px;
+        padding-bottom: 55px;
+        font-family: 'Calibri';
+        font-weight: bolder;
+        font-size: x-large;
+        color: #6d6f7a;
+      }
+    
+      .subfooter li {
+        color: #6d6f7a;
+        font-size: x-large;
+      }
+      
+      .subfooter-left ul {
+        display: flex;
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+      }
+      
+      .subfooter-left li {
+        margin-right: 20px; /* Space between list items */
+      }
+      
+      .subfooter-right {
+        display: flex;
+        align-items: center;
+      }
+      
+      .language-selector {
+        display: flex;
+        align-items: center;
+        margin-right: 20px; /* Space between language selector and social icons */
+      }
+      
+      .language-selector img {
+        width: 20px; /* Adjust as needed */
+        margin-right: 5px;
+      }
+      
+      .language-selector i {
+        margin-left: 5px;
+      }
+      
+      .social-icons i {
+        margin-left: 15px; /* Space between social icons */
+      }
+    
+      .subfooter i:hover {
+        color: #1264a3; /* Color when hovered */
+      }
+      
+      /* Individual colors for each icon, if desired */
+      .subfooter .fa-twitter:hover {
+        color: #1da1f2; /* Twitter blue */
+      }
+      
+      .subfooter .fa-facebook-f:hover {
+        color: #4267B2; /* Facebook blue */
+      }
+      
+      .subfooter .fa-youtube:hover {
+        color: #FF0000; /* YouTube red */
+      }    
+  }
+  
